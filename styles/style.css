@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right bottom, #6d9da8, #0c2dc0);
+  height: 100vh;
+  font-family: Lato;
+  text-align: center;
+}
+
+.main_container {
+  position: relative;
+}
+
+h1 {
+  text-transform: capitalize;
+  color: white;
+  margin: 190px 0 40px;
+}
+
+#temp_number {
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 20px;
+}
+
+#temp_number {
+  outline: none;
+}
+
+.result {
+  position: absolute;
+  top: 138px;
+  /* left: 606px; ===================     apllied in js file */
+  color: rgb(233, 233, 23);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  animation: moveToBottom 200ms ease-out;
+  display: none;
+}
+
+.buttons_wrapper {
+  margin-top: 70px;
+}
+
+button {
+  width: 170px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #49ebbf;
+  text-transform: uppercase;
+  color: #000;
+  transition: all 200ms ease-out;
+}
+
+button:hover {
+  box-shadow: 2px 0px 7px 1px #68eb49;
+  background: #68eb49;
+}
+
+button:active {
+  transform: scale(0.9);
+  box-shadow: 1px 0px 3.5px 0.5px #68eb49;
+}
+
+button:not(:last-child) {
+  margin-right: 90px;
+}
+
+@keyframes moveToBottom {
+  from {
+    transform: translateY(-25px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
